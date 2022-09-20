@@ -9,6 +9,11 @@ public class Employee {
     private double salary;
     private String department;
     private int yearsInService;
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
     public Employee (String forename, String surname, String birthdate, char gender, String takeNoticeOf, int age, double weight) {
         this.forename = forename;
         this.surname = surname;

@@ -1,19 +1,15 @@
 public class MainProgram {
     public static void main (String[] args) {
-<<<<<<< HEAD
-        Employee y = new Employee ("Max", "Mustermann", "01.01.2000", 'm', "Has cancer", 22, 65.5);
-        System.out.println(y.getName());
-        Employee y2 = y;
-        y2.changeName ("Alex", "Something");
-        System.out.println (y.getName());
-        
-=======
-        Employee y = new Employee ();
-        y.changeName ("Max");
-        System.out.println(y.getName());
-        Employee y2 = y;
-        y2.changeName ("Alex");
-        System.out.println (y.getName());
->>>>>>> e45e4f2 (Homework to the 13th of September)
+        Employee e1 = new Employee ("Max", "Mustermann", "01.01.2000", 'm', "", 0, 65.5);
+        Employee e2 = new Employee ("Maya", "Musterfrau", "24.10.1976", 'f', "", 0, 65.5);
+        Employee e3 = new Employee ("Any", "Name", "06.05.2003", 'd', "", 0, 65.5);
+        Employee e4 = e1;
+        e1.setDepartment("C64");
+        e2.setDepartment("C64");
+
+        System.out.println (e1.getDepartment());
+        System.out.println (e2.getDepartment());
+        System.out.println (e3.getDepartment());
+        System.out.println (e4.getDepartment());
     }
 }
