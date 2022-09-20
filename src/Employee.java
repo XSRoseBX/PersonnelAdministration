@@ -10,10 +10,6 @@ public class Employee {
     private String department;
     private int yearsInService;
 
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
     public Employee (String forename, String surname, String birthdate, char gender, String takeNoticeOf, int age, double weight) {
         this.forename = forename;
         this.surname = surname;
@@ -25,6 +21,10 @@ public class Employee {
         this.salary = 1500;
         this.department = "A38";
         this.yearsInService = 0;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
     public String getName () { return forename + " " + surname; }
