@@ -40,10 +40,10 @@ public class MainProgram {
                         // homework task 2c.ii)
                         if (employees[i].getAge() >= 50) {
                                 employees[i].setSalary(4000 + (Math.random()) * 5000);
-                                // homework task 2c.iii)
-                                if (employees[i].getAge() >= 60) {
-                                        employees[i].setSalary(employees[i].getSalary() + 500);
-                                }
+                        }
+                        // homework task 2c.iii)
+                        if (employees[i].getAge() >= 60) {
+                                employees[i].setSalary(employees[i].getSalary() + 500);
                         }
                 }
         }
