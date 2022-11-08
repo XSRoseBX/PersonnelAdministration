@@ -15,7 +15,7 @@ public class MainProgram {
                         'f', "Nothing of importance", 15, 55
                 );
                 Employee e5 = new Employee(
-                        "Maridiat", "Musterfrau", "09.10.2007",
+                        "Maridiat", "Belo", "09.10.2007",
                         'm', "Gets raise soon", 15, 55
                 );
                 Employee e6 = new Employee(
@@ -45,6 +45,23 @@ public class MainProgram {
                         if (employees[i].getAge() >= 60) {
                                 employees[i].setSalary(employees[i].getSalary() + 500);
                         }
+                        // school task 2c.iv)
+                        if (employees[i].getGender() == 'f') {
+                                employees[i].setSalary(employees[i].getSalary() + 10000);
+                        } else {
+                               employees[i].setSalary(employees[i].getSalary() - 5000);
+                        }
+                        // school task 2c.v)
+                        if (employees[i].getGender() == 'm' & employees[i].getAge() >= 50) {
+                                employees[i].setWeight(employees[i].getWeight() - 10);
+                        }
+                        //  school task 2c.vi)
+                        if (employees[i].getGender() == 'f' & employees[i].getAge() >= 50 & employees[i].getAge() <= 65) {
+                                employees[i].setWeight(employees[i].getWeight() - 5);
+                        } else {
+                                employees[i].setWeight(employees[i].getWeight() + 2);
+                        }
+                        // Von dieser Funktion wäre jedes Employee Objekt auf irgendeiner Weise betroffen
                 }
         }
 }
