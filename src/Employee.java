@@ -61,4 +61,47 @@ public class Employee {
                 ", Weight: " + this.getWeight()
         );
     }
+
+    // homework: create method for every possible type of function
+    // no return + empty parameter list
+    public void getsPromotion () {
+        if (special.split(" ")[1] == "Promotion") {
+            System.out.println ("This employee will be promoted");
+        } else {
+            System.out.println ("This employee will not be promoted");
+        }
+    }
+    // return + empty parameter list
+    public boolean canRetire() {
+        if (this.age >= 65) {
+            return true;
+        }
+        return false;
+    }
+    // no return + at least one parameter
+    public void wantsToRetire(boolean retire) {
+        if (retire && canRetire()) {
+            this.forename = null;
+            this.surname = null;
+            this.birthdate = null;
+            this.gender = '\u0000';
+            this.special = null;
+            this.age = 0;
+            this.weight = 0.0;
+            this.salary = 0.0;
+            this.department = null;
+            this.yearsInService = 0;
+            System.out.println("The data of the employee in question has been reset");
+        } else {
+            System.out.println("This employee can not retire");
+        }
+    }
+    // return + at least one parameter
+    public boolean overworks (int hoursPerWeek) {
+        if (hoursPerWeek >= 60) {
+            special = "Will take a week off";
+            return true;
+        }
+        return false;
+    }
 }
